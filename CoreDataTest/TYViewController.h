@@ -10,4 +10,6 @@
 
 @interface TYViewController : UIViewController
 
+- (IBAction)doStuff:(id)sender;
+
 @end

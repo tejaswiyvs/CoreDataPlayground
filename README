@@ -1,0 +1,9 @@
+Some fancy footwork with CoreData. Objectives are to showcase support for a majority of the functions that CoreData provides. The data model is reasonably simple while demonstrating all the intricacies of CoreData.
+
+ - Validation support.
+ - Undo management.
+ - Transient properties and NSManagedObject life cycle usage.
+ - Faulting.
+ - Cache Invalidation.
+ - KVO of core data properties.
+ - Multi threading support.

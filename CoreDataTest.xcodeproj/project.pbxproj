@@ -21,6 +21,14 @@
 		B7B4FA4118F4A41B0078ECC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B4FA2318F4A41B0078ECC3 /* UIKit.framework */; };
 		B7B4FA4918F4A41B0078ECC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7B4FA4718F4A41B0078ECC3 /* InfoPlist.strings */; };
 		B7B4FA4B18F4A41B0078ECC3 /* CoreDataTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4FA4A18F4A41B0078ECC3 /* CoreDataTestTests.m */; };
+		B7B4FA5718F4A46D0078ECC3 /* TYDataContext.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4FA5618F4A46D0078ECC3 /* TYDataContext.m */; };
+		B7B4FA9C18F4A7F60078ECC3 /* CoreDataTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7B4FA9A18F4A7F60078ECC3 /* CoreDataTest.xcdatamodeld */; };
+		B7B4FAA218F4AD4A0078ECC3 /* Appointment.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4FAA118F4AD4A0078ECC3 /* Appointment.m */; };
+		B7B4FAA518F4AD4A0078ECC3 /* Insurance.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4FAA418F4AD4A0078ECC3 /* Insurance.m */; };
+		B7B4FAA818F4AD4A0078ECC3 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4FAA718F4AD4A0078ECC3 /* Person.m */; };
+		B7B4FAAB18F4AD4A0078ECC3 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4FAAA18F4AD4A0078ECC3 /* Member.m */; };
+		B7B4FAAE18F4AD4A0078ECC3 /* Guarantor.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4FAAD18F4AD4A0078ECC3 /* Guarantor.m */; };
+		B7B4FAB118F4AD4A0078ECC3 /* EmergencyContact.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4FAB018F4AD4A0078ECC3 /* EmergencyContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,21 @@
 		B7B4FA4618F4A41B0078ECC3 /* CoreDataTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreDataTestTests-Info.plist"; sourceTree = "<group>"; };
 		B7B4FA4818F4A41B0078ECC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B7B4FA4A18F4A41B0078ECC3 /* CoreDataTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestTests.m; sourceTree = "<group>"; };
+		B7B4FA5518F4A46D0078ECC3 /* TYDataContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYDataContext.h; sourceTree = "<group>"; };
+		B7B4FA5618F4A46D0078ECC3 /* TYDataContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYDataContext.m; sourceTree = "<group>"; };
+		B7B4FA9B18F4A7F60078ECC3 /* CoreDataTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataTest.xcdatamodel; sourceTree = "<group>"; };
+		B7B4FAA018F4AD4A0078ECC3 /* Appointment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Appointment.h; path = Models/Appointment.h; sourceTree = "<group>"; };
+		B7B4FAA118F4AD4A0078ECC3 /* Appointment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Appointment.m; path = Models/Appointment.m; sourceTree = "<group>"; };
+		B7B4FAA318F4AD4A0078ECC3 /* Insurance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Insurance.h; path = Models/Insurance.h; sourceTree = "<group>"; };
+		B7B4FAA418F4AD4A0078ECC3 /* Insurance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Insurance.m; path = Models/Insurance.m; sourceTree = "<group>"; };
+		B7B4FAA618F4AD4A0078ECC3 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Person.h; path = Models/Person.h; sourceTree = "<group>"; };
+		B7B4FAA718F4AD4A0078ECC3 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = Models/Person.m; sourceTree = "<group>"; };
+		B7B4FAA918F4AD4A0078ECC3 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Member.h; path = Models/Member.h; sourceTree = "<group>"; };
+		B7B4FAAA18F4AD4A0078ECC3 /* Member.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Member.m; path = Models/Member.m; sourceTree = "<group>"; };
+		B7B4FAAC18F4AD4A0078ECC3 /* Guarantor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Guarantor.h; path = Models/Guarantor.h; sourceTree = "<group>"; };
+		B7B4FAAD18F4AD4A0078ECC3 /* Guarantor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Guarantor.m; path = Models/Guarantor.m; sourceTree = "<group>"; };
+		B7B4FAAF18F4AD4A0078ECC3 /* EmergencyContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmergencyContact.h; path = Models/EmergencyContact.h; sourceTree = "<group>"; };
+		B7B4FAB018F4AD4A0078ECC3 /* EmergencyContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmergencyContact.m; path = Models/EmergencyContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +135,8 @@
 		B7B4FA2518F4A41B0078ECC3 /* CoreDataTest */ = {
 			isa = PBXGroup;
 			children = (
+				B7B4FA9918F4A7DF0078ECC3 /* Models */,
+				B7B4FA5418F4A45E0078ECC3 /* CoreDataStack */,
 				B7B4FA2E18F4A41B0078ECC3 /* TYAppDelegate.h */,
 				B7B4FA2F18F4A41B0078ECC3 /* TYAppDelegate.m */,
 				B7B4FA3118F4A41B0078ECC3 /* Main.storyboard */,
@@ -150,6 +175,35 @@
 				B7B4FA4718F4A41B0078ECC3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7B4FA5418F4A45E0078ECC3 /* CoreDataStack */ = {
+			isa = PBXGroup;
+			children = (
+				B7B4FA5518F4A46D0078ECC3 /* TYDataContext.h */,
+				B7B4FA5618F4A46D0078ECC3 /* TYDataContext.m */,
+				B7B4FA9A18F4A7F60078ECC3 /* CoreDataTest.xcdatamodeld */,
+			);
+			name = CoreDataStack;
+			sourceTree = "<group>";
+		};
+		B7B4FA9918F4A7DF0078ECC3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7B4FAAF18F4AD4A0078ECC3 /* EmergencyContact.h */,
+				B7B4FAB018F4AD4A0078ECC3 /* EmergencyContact.m */,
+				B7B4FAAC18F4AD4A0078ECC3 /* Guarantor.h */,
+				B7B4FAAD18F4AD4A0078ECC3 /* Guarantor.m */,
+				B7B4FAA918F4AD4A0078ECC3 /* Member.h */,
+				B7B4FAAA18F4AD4A0078ECC3 /* Member.m */,
+				B7B4FAA618F4AD4A0078ECC3 /* Person.h */,
+				B7B4FAA718F4AD4A0078ECC3 /* Person.m */,
+				B7B4FAA318F4AD4A0078ECC3 /* Insurance.h */,
+				B7B4FAA418F4AD4A0078ECC3 /* Insurance.m */,
+				B7B4FAA018F4AD4A0078ECC3 /* Appointment.h */,
+				B7B4FAA118F4AD4A0078ECC3 /* Appointment.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +304,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7B4FAAE18F4AD4A0078ECC3 /* Guarantor.m in Sources */,
 				B7B4FA2C18F4A41B0078ECC3 /* main.m in Sources */,
+				B7B4FAA218F4AD4A0078ECC3 /* Appointment.m in Sources */,
 				B7B4FA3018F4A41B0078ECC3 /* TYAppDelegate.m in Sources */,
+				B7B4FAB118F4AD4A0078ECC3 /* EmergencyContact.m in Sources */,
+				B7B4FA5718F4A46D0078ECC3 /* TYDataContext.m in Sources */,
 				B7B4FA3618F4A41B0078ECC3 /* TYViewController.m in Sources */,
+				B7B4FA9C18F4A7F60078ECC3 /* CoreDataTest.xcdatamodeld in Sources */,
+				B7B4FAA818F4AD4A0078ECC3 /* Person.m in Sources */,
+				B7B4FAA518F4AD4A0078ECC3 /* Insurance.m in Sources */,
+				B7B4FAAB18F4AD4A0078ECC3 /* Member.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +519,7 @@
 				B7B4FA5018F4A41B0078ECC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7B4FA5118F4A41B0078ECC3 /* Build configuration list for PBXNativeTarget "CoreDataTestTests" */ = {
 			isa = XCConfigurationList;
@@ -465,8 +528,22 @@
 				B7B4FA5318F4A41B0078ECC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B7B4FA9A18F4A7F60078ECC3 /* CoreDataTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B7B4FA9B18F4A7F60078ECC3 /* CoreDataTest.xcdatamodel */,
+			);
+			currentVersion = B7B4FA9B18F4A7F60078ECC3 /* CoreDataTest.xcdatamodel */;
+			path = CoreDataTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B7B4FA1418F4A41B0078ECC3 /* Project object */;
 }
