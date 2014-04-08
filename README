@@ -1,4 +1,4 @@
-Some fancy footwork with CoreData. Objectives are to showcase support for a majority of the functions that CoreData provides. The data model is reasonably simple while demonstrating all the intricacies of CoreData.
+Some fancy footwork with CoreData. Objectives are to showcase support for a majority of the functions that CoreData provides. The data model is reasonably simple while demonstrating all the intricacies of CoreData. Open CoreDataTest.xcworkspace to view code.
 
  - Validation support.
  - Undo management.
