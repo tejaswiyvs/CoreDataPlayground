@@ -1,47 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Appointment" representedClassName="Appointment" syncable="YES">
-        <relationship name="member" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Member" inverseName="appointments" inverseEntity="Member" syncable="YES"/>
+    <entity name="Address" representedClassName="TYAddress" syncable="YES">
+        <attribute name="address1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="address2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zip" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="address" inverseEntity="Person" syncable="YES"/>
+        <relationship name="practice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Practice" inverseName="address" inverseEntity="Practice" syncable="YES"/>
     </entity>
-    <entity name="EmergencyContact" representedClassName="EmergencyContact" parentEntity="Person" syncable="YES">
+    <entity name="Appointment" representedClassName="TYAppointment" syncable="YES">
+        <attribute name="appointmentDateTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="service" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="member" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="appointments" inverseEntity="Member" syncable="YES"/>
+        <relationship name="physician" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Physician" inverseName="appointments" inverseEntity="Physician" syncable="YES"/>
+        <relationship name="practice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Practice" inverseName="appointments" inverseEntity="Practice" syncable="YES"/>
+    </entity>
+    <entity name="EmergencyContact" representedClassName="TYEmergencyContact" parentEntity="Person" syncable="YES">
         <attribute name="orderId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="member" optional="YES" transient="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="emergencyContacts" inverseEntity="Member" syncable="YES"/>
     </entity>
-    <entity name="Guarantor" representedClassName="Guarantor" parentEntity="Person" syncable="YES">
+    <entity name="Guarantor" representedClassName="TYGuarantor" parentEntity="Person" syncable="YES">
         <attribute name="orderId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="member" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="guarantors" inverseEntity="Member" syncable="YES"/>
     </entity>
-    <entity name="Insurance" representedClassName="Insurance" syncable="YES">
+    <entity name="Insurance" representedClassName="TYInsurance" syncable="YES">
         <attribute name="groupNumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="insuranceCompany" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="orderId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="planNumber" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="member" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="insurances" inverseEntity="Member" syncable="YES"/>
     </entity>
-    <entity name="Member" representedClassName="Member" parentEntity="Person" syncable="YES">
+    <entity name="Member" representedClassName="TYMember" parentEntity="Person" syncable="YES">
         <relationship name="appointments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Appointment" inverseName="member" inverseEntity="Appointment" syncable="YES"/>
         <relationship name="emergencyContacts" optional="YES" transient="YES" toMany="YES" deletionRule="Cascade" destinationEntity="EmergencyContact" inverseName="member" inverseEntity="EmergencyContact" syncable="YES"/>
         <relationship name="guarantors" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Guarantor" inverseName="member" inverseEntity="Guarantor" syncable="YES"/>
         <relationship name="insurances" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Insurance" inverseName="member" inverseEntity="Insurance" syncable="YES"/>
     </entity>
-    <entity name="Person" representedClassName="Person" isAbstract="YES" syncable="YES">
-        <attribute name="address1" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="address2" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Person" representedClassName="TYPerson" isAbstract="YES" syncable="YES">
         <attribute name="birthDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="firstName" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
-        <attribute name="profilePicture" optional="YES" transient="YES" syncable="YES"/>
-        <attribute name="profilePicturePath" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="zip" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profilePicture" optional="YES" transient="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="address" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="person" inverseEntity="Address" syncable="YES"/>
+    </entity>
+    <entity name="Physician" representedClassName="TYPhysician" parentEntity="Person" syncable="YES">
+        <attribute name="npi" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="appointments" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Appointment" inverseName="physician" inverseEntity="Appointment" syncable="YES"/>
+        <relationship name="practice" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Practice" inverseName="physician" inverseEntity="Practice" syncable="YES"/>
+    </entity>
+    <entity name="Practice" representedClassName="TYPractice" syncable="YES">
+        <attribute name="practiceName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="address" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="practice" inverseEntity="Address" syncable="YES"/>
+        <relationship name="appointments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Appointment" inverseName="practice" inverseEntity="Appointment" syncable="YES"/>
+        <relationship name="physician" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Physician" inverseName="practice" inverseEntity="Physician" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Appointment" positionX="-54" positionY="-9" width="128" height="58"/>
-        <element name="EmergencyContact" positionX="0" positionY="72" width="128" height="73"/>
-        <element name="Guarantor" positionX="-18" positionY="63" width="128" height="73"/>
-        <element name="Insurance" positionX="-36" positionY="54" width="128" height="118"/>
         <element name="Member" positionX="-63" positionY="-18" width="128" height="103"/>
-        <element name="Person" positionX="18" positionY="81" width="128" height="195"/>
+        <element name="Insurance" positionX="-54" positionY="-9" width="128" height="118"/>
+        <element name="Guarantor" positionX="-45" positionY="45" width="128" height="73"/>
+        <element name="EmergencyContact" positionX="-36" positionY="54" width="128" height="73"/>
+        <element name="Person" positionX="-18" positionY="0" width="128" height="118"/>
+        <element name="Appointment" positionX="0" positionY="108" width="128" height="118"/>
+        <element name="Physician" positionX="18" positionY="126" width="128" height="88"/>
+        <element name="Practice" positionX="-27" positionY="72" width="128" height="103"/>
+        <element name="Address" positionX="-18" positionY="81" width="128" height="148"/>
     </elements>
 </model>
